@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 13:59:03 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/07 14:27:46 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:12:05 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void Contact::add_contact()
 			std::getline(std::cin, input);
 			if (std::cin.eof())
 			{
-				std::cout << RED << "Bye" << YELLOW << " :)" << RESET << std::endl;
+				std::cout << GREEN << "Bye" << " :)" << RESET << std::endl;
 				exit(0);
 			}
 			if (input.length() > 0)
 				break;
 			else
-				std::cout << "Please enter something!" << std::endl;
+				std::cout << RED << "Please enter something!" << RESET << std::endl;
 		}
 		if (i == 0)
 			firstname = input;

@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 11:58:20 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/07 14:39:46 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:14:52 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void Contact::get_contact_infos()
 void PhoneBook::display_contact()
 {
 	if (index == 0)
-		return std::cout << "There is no one in the phonebook, use ADD" << std::endl, (void)0;
+		return std::cout << RED << "There is no one in the phonebook, use ADD !" << RESET << std::endl, (void)0;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
 	
@@ -68,15 +68,17 @@ void PhoneBook::display_contact()
 	std::string input;
 	while (1)
 	{
-		std::cout << "Choose a index between 1 and 8" << std::endl;
+		std::cout << "Choose an index between 1 and 8" << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 		{
-			std::cout << RED << "Bye" << YELLOW << " :)" << RESET << std::endl;
+			std::cout << GREEN << "Bye" << " :)" << RESET << std::endl;
 			exit(0);
 		}
-		if (input.length() != 1)
-			std::cout << input << " is not a index between 1 and 8 !" << std::endl;
+		if (input.length() == 0)
+			std::cout << RED << "Please enter something!" << RESET << std::endl;
+		else if (input.length() != 1 || (input.length() == 1 && !(input[0] >= '1' && input[0] <= '8')))
+			std::cout << GREEN  << "{" << input << "}" << RED " Is not an index between 1 and 8 !" << RESET << std::endl;
 		else if (input[0] >= '1' && input[0] <= '8')
 		{
 			if (index > input[0] - '0' - 1)
@@ -85,7 +87,7 @@ void PhoneBook::display_contact()
 				break ;
 			}
 			else
-				std::cout << "contact with index : " << input << " doesn't exist" << std::endl;
+				std::cout << RED << "contact with index : " << GREEN  << "{" << input << "}" << RED <<  " doesn't exist" << RESET << std::endl;
 		}
 	}
 }

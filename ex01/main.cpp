@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:35:42 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/07 14:14:41 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/07 15:11:45 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main()
 
 	while (1)
 	{
+		std::cout << "Type ADD or SEARCH or EXIT" << std::endl;
 		std::getline(std::cin ,input);
 		if (std::cin.eof())
 			break;
@@ -29,6 +30,6 @@ int	main()
 		else if (!input.compare("SEARCH"))
 			phoneBook.display_contact();
 	}
-	std::cout << RED << "Bye" << YELLOW << " :)" << RESET << std::endl;
+	std::cout << GREEN << "Bye" << " :)" << RESET << std::endl;
 	return 0;
 }
