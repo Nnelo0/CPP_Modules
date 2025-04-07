@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 13:48:14 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/02 14:38:52 by ebroudic         ###   ########.fr       */
+/*   Created: 2025/04/02 14:35:42 by ebroudic          #+#    #+#             */
+/*   Updated: 2025/04/07 14:14:41 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "PhoneBook.hpp"
 
-int main(int argc, char **argv)
+int	main()
 {
-	if (argc == 1)
-		return std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl, 0;
+	std::string input;
+	PhoneBook phoneBook;
 
-    for (int j = 1; argv[j]; j++)
+	while (1)
 	{
-		for (int i = 0; argv[j][i]; i++)
-			argv[j][i] = toupper(argv[j][i]);
-		std::cout << argv[j];
+		std::getline(std::cin ,input);
+		if (std::cin.eof())
+			break;
+		if (!input.compare("EXIT"))
+			break;
+		else if (!input.compare("ADD"))
+			phoneBook.add_contact_phonebook();
+		else if (!input.compare("SEARCH"))
+			phoneBook.display_contact();
 	}
-	std::cout << std::endl;
+	std::cout << RED << "Bye" << YELLOW << " :)" << RESET << std::endl;
 	return 0;
 }

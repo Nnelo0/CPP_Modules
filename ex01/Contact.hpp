@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 13:48:14 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/02 14:38:52 by ebroudic         ###   ########.fr       */
+/*   Created: 2025/04/07 10:15:16 by ebroudic          #+#    #+#             */
+/*   Updated: 2025/04/07 14:26:52 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#include <string>
 #include <iostream>
 
-int main(int argc, char **argv)
+class Contact 
 {
-	if (argc == 1)
-		return std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl, 0;
+	private:
+		std::string field_name[5];
 
-    for (int j = 1; argv[j]; j++)
-	{
-		for (int i = 0; argv[j][i]; i++)
-			argv[j][i] = toupper(argv[j][i]);
-		std::cout << argv[j];
-	}
-	std::cout << std::endl;
-	return 0;
-}
+		std::string firstname;
+		std::string lastname;
+		std::string nickname;
+		std::string phonenumber;
+		std::string darkestsecret;
+	
+	public:
+
+	void display_contact(int i);
+	void add_contact();
+	void get_contact_infos();
+};
