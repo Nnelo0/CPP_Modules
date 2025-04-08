@@ -1,5 +1,6 @@
 
-??
+//constructor
+
 [19920104_091532] index:0;amount:42;created
 [19920104_091532] index:1;amount:54;created
 [19920104_091532] index:2;amount:957;created
@@ -77,7 +78,8 @@
 [19920104_091532] index:7;amount:8942;deposits:1;withdrawals:1
 
 
-??
+//destructor
+
 [19920104_091532] index:0;amount:47;closed
 [19920104_091532] index:1;amount:785;closed
 [19920104_091532] index:2;amount:864;closed
