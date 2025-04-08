@@ -1,16 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   addcontact.cpp                                     :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 13:59:03 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/07 15:12:05 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/08 09:07:52 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+std::string Contact::formatField(const std::string& str) 
+{
+    if (str.length() > 10)
+        return str.substr(0, 9) + ".";
+    std::stringstream ss;
+    ss << std::setw(10) << str;
+    return ss.str();
+}
+
+std::string Contact::formatField(int i)
+{
+    std::stringstream ss;
+    ss << i;
+    return formatField(ss.str());
+}
 
 void Contact::add_contact()
 {
@@ -51,17 +67,21 @@ void Contact::add_contact()
 	}
 }
 
-void PhoneBook::add_contact_phonebook()
+void Contact::display_contact(int i)
 {
-	if (index < 8)
-	{
-		Phonebook[index].add_contact();
-		index++;
-	}
-	else if (index >= 8)
-	{
-		for(int i = 1; i < 8; i++)
-			Phonebook[i -1] = Phonebook[i];
-		Phonebook[7].add_contact();
-	}
+	std::cout	<< "|" << formatField(i) 
+				<< "|" << formatField(firstname)
+				<< "|" << formatField(lastname)
+				<< "|" << formatField(nickname)
+				<< "|" << std::endl;
+	std::cout << "|----------|----------|----------|----------|" << std::endl;
+}
+
+void Contact::get_contact_infos()
+{
+	std::cout << "First Name : " << firstname << std::endl;
+	std::cout << "Last Name : " << lastname << std::endl;
+	std::cout << "Nickname : " << nickname << std::endl;
+	std::cout << "Phone number : " << phonenumber << std::endl;
+	std::cout << "Darkest Secret : " << darkestsecret << std::endl;
 }
