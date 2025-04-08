@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:15:16 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/08 09:08:05 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:32:22 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class Contact
 	public:
 
 	void display_contact(int i);
-	std::string Contact::formatField(const std::string& str);
-	std::string Contact::formatField(int i);
+	std::string formatField(const std::string& str);
+	std::string formatField(int i);
 	void add_contact();
 	void get_contact_infos();
 };

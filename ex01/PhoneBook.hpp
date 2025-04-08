@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:14:58 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/07 14:18:11 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/08 10:27:36 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class PhoneBook
 		int		index;
 
 	public:
-	
+
 	PhoneBook();
-	
+
 	void	display_contact();
 	void	add_contact_phonebook();
 };

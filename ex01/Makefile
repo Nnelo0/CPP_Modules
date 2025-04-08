@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 
 OBJDIR = obj
 
-SRCS = main.cpp displaycontact.cpp addcontact.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 all: $(NAME)
