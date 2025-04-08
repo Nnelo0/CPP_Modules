@@ -6,17 +6,17 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:14:58 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/08 10:27:36 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/08 13:30:11 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Contact.hpp"
+
 #include <cstdlib>
 #include <sstream>
 #include <iomanip>
-
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
