@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 23:45:03 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/28 18:03:42 by ebroudic         ###   ########.fr       */
+/*   Created: 2025/04/28 18:04:32 by ebroudic          #+#    #+#             */
+/*   Updated: 2025/04/28 18:05:33 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-class WrongAnimal
+class Brain
 {
-	protected:
+	private:
 
-		std::string type;
+		std::string ideas[100];
 
 	public:
 
-		WrongAnimal();
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal& wrongAnimal);
-
-		WrongAnimal& operator=(const WrongAnimal& wrongAnimal);
-	
-		virtual ~WrongAnimal();
-
-		std::string getType()const;
-		void makeSound()const;
+		Brain();
+		Brain(const Brain& other);
+		
+		Brain& operator=(const Brain& other);
+		
+		~Brain();
 
 };

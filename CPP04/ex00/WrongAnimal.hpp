@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 23:45:03 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/26 00:03:13 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:03:22 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ class WrongAnimal
 		virtual ~WrongAnimal();
 
 		std::string getType()const;
-		virtual void makeSound()const;
+		void makeSound()const;
 
 };
