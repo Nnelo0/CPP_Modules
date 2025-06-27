@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:14:40 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/25 09:39:50 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/27 10:08:16 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ int main( void )
 		std::cout << "b / 2: " << b / 2 << std::endl;
 		std::cout << "a - b: " << a - b << std::endl;
 		std::cout << "b * 2: " << b * 2 << std::endl;
+		std::cout << "b / 0: " << b / 0 << std::endl;
+
 	}
 
 	return 0;

@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:14:36 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/17 14:21:28 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/26 09:37:45 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Fixed
 	public:
 
 		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator=(const Fixed &copy);
+		Fixed(const Fixed &fixed);
+		Fixed &operator=(const Fixed &fixed);
 		~Fixed();
 		
 		int getRawBits( void ) const;

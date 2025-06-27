@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:37:50 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/18 11:15:37 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:03:35 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 const int Fixed::_numberOfBits = 8;
 
-Fixed::Fixed()
+Fixed::Fixed(): _valueOfNumber(0)
 {
-	_valueOfNumber = 0;
+
 }
 
 Fixed::~Fixed()
@@ -24,15 +24,15 @@ Fixed::~Fixed()
 	
 }
 
-Fixed::Fixed(const Fixed &copy)
+Fixed::Fixed(const Fixed &fixed): _valueOfNumber(fixed._valueOfNumber)
 {
-	*this = copy;
+
 }
 
-Fixed &Fixed::operator=(const Fixed &copy)
+Fixed &Fixed::operator=(const Fixed &fixed)
 {
-	if (this != &copy)
-		this->_valueOfNumber = copy.getRawBits();
+	if (this != &fixed)
+		this->_valueOfNumber = fixed.getRawBits();
 	return *this;
 }
 
@@ -122,6 +122,9 @@ Fixed Fixed::operator*(const Fixed &fixed) const
 
 Fixed Fixed::operator/(const Fixed &fixed) const
 {
+	if (fixed.toFloat() == 0)
+		std::cout << "\033[31m Warning you can't divide per 0, This will still give you a result 🙃\033[0m : ";
+
 	float res = this->toFloat() / fixed.toFloat();
 	return Fixed(res);
 }

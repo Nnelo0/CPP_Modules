@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 12:38:53 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/18 18:37:50 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/27 12:04:14 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Point
 		Point(const float x, const float y);
 
 		Point& operator=(const Point& point);
-		
+
 		~Point();
 
 		Fixed getX( void ) const;

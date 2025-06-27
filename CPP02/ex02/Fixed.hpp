@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:14:36 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/24 09:20:05 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/26 11:21:17 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Fixed
 	public:
 
 		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator=(const Fixed &copy);
+		Fixed(const Fixed &fixed);
+		Fixed &operator=(const Fixed &fixed);
 		
 		Fixed(const int value);
 		Fixed(const float value);

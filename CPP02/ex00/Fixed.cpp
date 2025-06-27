@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:37:50 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/25 09:35:29 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/27 09:58:14 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 const int Fixed::_numberOfBits = 8;
 
-Fixed::Fixed()
+Fixed::Fixed(): _valueOfNumber(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	_valueOfNumber = 0;
+	
 }
 
 Fixed::~Fixed()
@@ -25,17 +25,16 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copy)
+Fixed::Fixed(const Fixed &fixed): _valueOfNumber(fixed._valueOfNumber)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = copy;
 }
 
-Fixed &Fixed::operator=(const Fixed &copy)
+Fixed &Fixed::operator=(const Fixed &fixed)
 {
-	std::cout << "Copy assignment constructor called" << std::endl;
-	if (this != &copy)
-		this->_valueOfNumber = copy.getRawBits();
+	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &fixed)
+		this->_valueOfNumber = fixed.getRawBits();
 	return *this;
 }
 
