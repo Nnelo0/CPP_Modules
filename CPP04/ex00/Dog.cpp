@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 23:02:16 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/28 18:19:55 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/29 19:48:43 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ Dog::~Dog()
 
 void Dog::makeSound()const
 {
-	std::cout << "Dog with type : " << getType() << " says : WWOOOOOOOOOFFFFFFFF !!" << std::endl;
+	std::cout << "WWOOOOOFFF ! WWOOOOFFFFF !!" << std::endl;
 }

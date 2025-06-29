@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 23:15:42 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/26 00:17:15 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/29 21:21:04 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 	std::cout << std::endl;
 	std::cout << "-----------GOOD-TEST-----------" << std::endl;
 	std::cout << std::endl;
-	
+
 	{
 		const Animal* meta = new Animal();
 		std::cout << std::endl;

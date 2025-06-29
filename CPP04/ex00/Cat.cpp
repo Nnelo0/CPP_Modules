@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 23:02:12 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/28 18:19:10 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/29 19:48:38 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ Cat::~Cat()
 
 void Cat::makeSound()const
 {
-	std::cout << "Cat with type : " << getType() << " says : MMEEOOWW !!" << std::endl;
+	std::cout << "MMEEOOWW !!" << std::endl;
 }

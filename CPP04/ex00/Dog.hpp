@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 23:02:17 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/25 23:28:13 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/29 16:43:09 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 
 class Dog : public Animal
 {
-	private:
-
 	public:
 
 		Dog();
