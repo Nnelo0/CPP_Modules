@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:51 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/22 09:26:04 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/29 16:05:32 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& clapTrap)
 	this->_hitPoints = clapTrap._hitPoints;
 	this->_energyPoints = clapTrap._energyPoints;
 	this->_attackDamage = clapTrap._attackDamage;
-	
+
 	return (*this);
 }
-	
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << RED << "ClapTrap destructor called" << RESET << std::endl;
@@ -62,7 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " is dead ! Don't hit a dead person !" << std::endl;
 	else 
 	{
-		this->_hitPoints -= amount;
+		amount > this->_hitPoints ? this->_hitPoints = 0 : this->_hitPoints -= amount;
 		std::cout << "ClapTrap " << this->_name << " took " << amount << " damages, he has "
 		<< this->_hitPoints << " hits points left!" << std::endl;
 	}
@@ -76,8 +76,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " is dead obviously he can't repair itself !" << std::endl;
 	else
 	{
-		std::cout	<< "ClapTrap " << this->_name << " repairs itself of " << amount
-					<< " hits points!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " repairs itself of " << amount << " hits points!" << std::endl;
 		this->_energyPoints--;
 		this->_hitPoints += amount;
 	}
