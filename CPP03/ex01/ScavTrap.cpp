@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 16:44:18 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/22 09:29:34 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 10:58:34 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 void ScavTrap::attack(const std::string& target)
 {
 	if (this->_energyPoints == 0)
-		std::cout << "ScavTrap " << this->_name << " doesn't have enough energy to attacks !" << std::endl;
+		std::cout << "ScavTrap " << CYAN << this->_name << RED << " doesn't have enough energy to attacks !" << RESET << std::endl;
 	else if (this->_hitPoints == 0)
-		std::cout << "ScavTrap " << this->_name << " is dead obviously he can't attacks !" << std::endl;
+		std::cout << "ScavTrap "  << CYAN << this->_name << RED << " is dead obviously he can't attacks !" << RESET << std::endl;
 	else
 	{
-		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+		std::cout << "ScavTrap " << CYAN << this->_name << RESET << " attacks " << CYAN << target << RESET << ", causing " << MAGENTA << _attackDamage << RESET << " points of damage!" << std::endl;
 		this->_energyPoints--;
 	}
 }
@@ -72,11 +72,11 @@ void ScavTrap::guardGate()
 {
 	if (this->_gateKeeperMode)
 	{
-		std::cout << "ScavTrap " << this->_name << " is already in GateKeeper mode " << std::endl;
+		std::cout << "ScavTrap " << CYAN << this->_name << RED << " is already in GateKeeper mode " << RESET << std::endl;
 	}
 	else
 	{
 		this->_gateKeeperMode = true;
-		std::cout << "ScavTrap " << this->_name << " is now in GateKeeper mode " << std::endl;
+		std::cout << "ScavTrap "  << CYAN << this->_name << YELLOW << " is now in GateKeeper mode " << RESET << std::endl;
 	}
 }
