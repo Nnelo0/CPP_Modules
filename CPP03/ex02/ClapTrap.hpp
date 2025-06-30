@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:45 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/22 09:30:23 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:23:55 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # define GREEN		"\033[1;32m"
 # define CYAN		"\033[1;36m"
+# define BLUE    	"\033[34m"
 # define MAGENTA	"\033[1;35m"
 # define YELLOW 	"\033[1;33m"
 # define RED 		"\033[1;31m"

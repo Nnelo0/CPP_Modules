@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:36:30 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/24 11:16:42 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:24:05 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,5 @@ FragTrap& FragTrap::operator=(const FragTrap& fragTrap)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << " High Five with me guys !!" << std::endl;
+	std::cout << "FragTrap " << CYAN << this->_name << BLUE << " High Five with me guys !!" << RESET << std::endl;
 }

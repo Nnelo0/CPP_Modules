@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:51 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 10:55:24 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:26:49 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << CYAN << this->_name << RED << " is dead obviously he can't repair itself !" << RESET << std::endl;
 	else
 	{
-		std::cout << "ClapTrap " << CYAN << this->_name << RESET << " repairs itself of " << MAGENTA << amount << RESET << " hits points!" << std::endl;
 		this->_energyPoints--;
 		this->_hitPoints += amount;
+		std::cout << "ClapTrap " << CYAN << this->_name << RESET << " repairs itself of " << MAGENTA << amount << RESET << " hits points!" << " He has " << MAGENTA << this->_hitPoints << RESET << " hits point left" << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:47 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/22 09:32:48 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:26:00 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,28 @@ int main()
 
 	person1.attack("person2");
 	std::cout << std::endl;
-	
+
 	person2.takeDamage(1);
 	std::cout << std::endl;
-	
+
 	person2.beRepaired(1);
 	std::cout << std::endl;
-	
+
 	person3.attack("person1");
 	std::cout << std::endl;
-	
-	person3.guardGate();
-	std::cout << std::endl;
-	
+
 	person3.guardGate();
 	std::cout << std::endl;
 
 	person4.attack("person3");
 	std::cout << std::endl;
-	
+
+	person4.takeDamage(10);
+	std::cout << std::endl;
+
+	person4.beRepaired(7);
+	std::cout << std::endl;
+
 	person4.highFivesGuys();
 	std::cout << std::endl;
 }
