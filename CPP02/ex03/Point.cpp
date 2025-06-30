@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 12:39:15 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/27 11:36:36 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 09:25:07 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Point::Point():x(0), y(0)
 {
-	Fixed x;
-	Fixed y;
+
 }
 
 Point::Point(const Point& point): x(point.x), y(point.y){}

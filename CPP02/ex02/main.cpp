@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:14:40 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/27 10:08:16 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 09:13:47 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,17 +73,26 @@ int main( void )
 
 	
 		std::cout << std::endl;
-
-		std::cout << "max between a and b: " << Fixed::max( a, b ) << std::endl;
-		std::cout << "min between a and b: " << Fixed::min( a, b ) << std::endl;
-	
-		std::cout << std::endl;
+		
 		std::cout << "a + b: " << a + b << std::endl;
 		std::cout << "b / 2: " << b / 2 << std::endl;
 		std::cout << "a - b: " << a - b << std::endl;
 		std::cout << "b * 2: " << b * 2 << std::endl;
 		std::cout << "b / 0: " << b / 0 << std::endl;
+		
+		std::cout << std::endl;
 
+		std::cout << "max between a and b: " << Fixed::max( a, b ) << std::endl;
+		std::cout << "min between a and b: " << Fixed::min( a, b ) << std::endl;
+		
+		Fixed::max( a, d ) = Fixed(42.0f);
+		std::cout << "d: " << d << std::endl;
+		std::cout << "a: " << a << std::endl;
+		
+		Fixed::min( a, d ) = Fixed(21.0f);
+		std::cout << "d: " << d << std::endl;
+		std::cout << "a: " << a << std::endl;
+		
 	}
 
 	return 0;

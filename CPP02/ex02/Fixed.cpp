@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:37:50 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/27 11:03:03 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 08:57:32 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ Fixed::~Fixed()
 
 }
 
-Fixed::Fixed(const Fixed &fixed): _valueOfNumber(fixed._valueOfNumber)
+Fixed::Fixed(const Fixed &fixed)
 {
-
+	*this = fixed;
 }
 
 Fixed &Fixed::operator=(const Fixed &fixed)
