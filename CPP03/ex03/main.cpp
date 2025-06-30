@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:47 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/24 14:10:39 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 13:45:12 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
-
 
 int main()
 {
@@ -56,6 +55,17 @@ int main()
 	std::cout << std::endl;
 
 	person5.whoAmI();
+	std::cout << std::endl;
+
+	for (int i = 0; i != 50; i++)
+		person5.attack("person4");
+	
+	std::cout << std::endl;
+	
+	person5.guardGate();
+	std::cout << std::endl;
+
+	person5.highFivesGuys();
 	std::cout << std::endl;
 
 }

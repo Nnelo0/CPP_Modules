@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:36:30 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/24 11:17:26 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 13:48:44 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::FragTrap(const FragTrap& fragTrap): ClapTrap(fragTrap)
 {
-	std::cout << "FragTrap copy constructor called" << std::endl;
+	std::cout << MAGENTA << "FragTrap copy constructor called" << std::endl;
 	*this = fragTrap;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << RED << "FragTrap destructor called" << RESET << std::endl;
+	std::cout << MAGENTA << "FragTrap " << RED << "destructor called" << RESET << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& fragTrap)
 {
-	std::cout << "FragTrap Assignation operator called" << std::endl;
+	std::cout << MAGENTA << "FragTrap Assignation operator called" << std::endl;
 
 	this->_name = fragTrap._name;
 	this->_hitPoints = fragTrap._hitPoints;
@@ -54,5 +54,5 @@ FragTrap& FragTrap::operator=(const FragTrap& fragTrap)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << " High Five with me guys !!" << std::endl;
+	std::cout << MAGENTA << "FragTrap " << CYAN << this->_name << BLUE << " High Five with me guys !!" << RESET << std::endl;
 }

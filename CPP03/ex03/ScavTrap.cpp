@@ -6,10 +6,9 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 16:44:18 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 12:21:16 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 13:39:51 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ScavTrap.hpp"
 
@@ -34,18 +33,18 @@ ScavTrap::ScavTrap(std::string name)
 
 ScavTrap::ScavTrap(const ScavTrap& scavTrap): ClapTrap(scavTrap)
 {
-	std::cout << "ScavTrap copy constructor called" << std::endl;
+	std::cout << YELLOW << "ScavTrap copy constructor called" << std::endl;
 	*this = scavTrap;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << RED << "ScavTrap destructor called" << RESET << std::endl;
+	std::cout << YELLOW << "ScavTrap " << RED << "destructor called" << RESET << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 {
-	std::cout << "ScavTrap Assignation operator called" << std::endl;
+	std::cout << YELLOW << "ScavTrap Assignation operator called" << std::endl;
 
 	this->_name = scavTrap._name;
 	this->_hitPoints = scavTrap._hitPoints;
@@ -58,12 +57,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& scavTrap)
 void ScavTrap::attack(const std::string& target)
 {
 	if (this->_energyPoints == 0)
-		std::cout << "ScavTrap " << CYAN << this->_name << RED << " doesn't have enough energy to attacks !" << RESET << std::endl;
+		std::cout << YELLOW << "ScavTrap " << CYAN << this->_name << RED << " doesn't have enough energy to attacks !" << RESET << std::endl;
 	else if (this->_hitPoints == 0)
-		std::cout << "ScavTrap "  << CYAN << this->_name << RED << " is dead obviously he can't attacks !" << RESET << std::endl;
+		std::cout << YELLOW << "ScavTrap "  << CYAN << this->_name << RED << " is dead obviously he can't attacks !" << RESET << std::endl;
 	else
 	{
-		std::cout << "ScavTrap " << CYAN << this->_name << RESET << " attacks " << CYAN << target << RESET << ", causing " << MAGENTA << _attackDamage << RESET << " points of damage!" << std::endl;
+		std::cout << YELLOW << "ScavTrap " << CYAN << this->_name << RESET << " attacks " << CYAN << target << RESET << ", causing " << MAGENTA << _attackDamage << RESET << " points of damage!" << std::endl;
 		this->_energyPoints--;
 	}
 }
@@ -72,11 +71,11 @@ void ScavTrap::guardGate()
 {
 	if (this->_gateKeeperMode)
 	{
-		std::cout << "ScavTrap " << CYAN << this->_name << RED << " is already in GateKeeper mode " << RESET << std::endl;
+		std::cout << YELLOW << "ScavTrap " << CYAN << this->_name << RED << " is already in GateKeeper mode " << RESET << std::endl;
 	}
 	else
 	{
 		this->_gateKeeperMode = true;
-		std::cout << "ScavTrap "  << CYAN << this->_name << YELLOW << " is now in GateKeeper mode " << RESET << std::endl;
+		std::cout << YELLOW << "ScavTrap "  << CYAN << this->_name << YELLOW << " is now in GateKeeper mode " << RESET << std::endl;
 	}
 }
