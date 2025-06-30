@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 16:35:40 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 16:56:22 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/06/30 19:30:00 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AMateria
 		virtual ~AMateria();
 
 		AMateria& operator=(const AMateria& Amateria);
-		
+
 		std::string const & getType() const;
 
 		virtual AMateria* clone() const = 0;

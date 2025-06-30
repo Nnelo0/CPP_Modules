@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 
 OBJDIR = obj
 
-SRCS = main.cpp 
+SRCS = AMateria.cpp Character.cpp IMateriaSource.cpp ICharacter.cpp MateriaSource.cpp Cure.cpp Ice.cpp main.cpp
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 all: $(NAME)
