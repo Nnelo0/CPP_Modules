@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:47 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 12:26:00 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 09:22:30 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int main()
 {
 	ClapTrap person1("person1");
 	ClapTrap person2("person2");
+	std::cout << std::endl;
+	
 	ScavTrap person3("person3");
+	std::cout << std::endl;
+	
 	FragTrap person4("person4");
 	std::cout << std::endl;
 
@@ -49,4 +53,19 @@ int main()
 
 	person4.highFivesGuys();
 	std::cout << std::endl;
+
+	for (int i = 0; i != 100; i++)
+		person4.attack("person3");
+
+	std::cout << std::endl;
+
+	person4.beRepaired(7);
+	std::cout << std::endl;
+
+	ClapTrap *test = new FragTrap();
+	test->attack("test");
+	std::cout << std::endl;
+
+	delete test;
+
 }

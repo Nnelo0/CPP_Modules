@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:45 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 12:23:55 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 10:05:55 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 class ClapTrap
 {
 	protected:
-		
+
 		std::string _name;
 
 		unsigned int _hitPoints;
@@ -40,10 +40,10 @@ class ClapTrap
 		ClapTrap(const ClapTrap& other);
 
 		ClapTrap& operator=(const ClapTrap& other);
-	
-		~ClapTrap();
 
-		void attack(const std::string& target);
+		virtual ~ClapTrap();
+
+		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 };

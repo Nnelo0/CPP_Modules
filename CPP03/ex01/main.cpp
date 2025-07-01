@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:47 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 12:51:28 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 09:12:28 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,7 @@ int main()
 	person3.beRepaired(5);
 	std::cout << std::endl;
 
+	ClapTrap *test = new ScavTrap();
+	test->attack("test");
+	delete test;
 }

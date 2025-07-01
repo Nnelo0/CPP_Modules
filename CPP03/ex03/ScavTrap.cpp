@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 16:44:18 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 13:39:51 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 09:34:09 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void ScavTrap::attack(const std::string& target)
 		std::cout << YELLOW << "ScavTrap "  << CYAN << this->_name << RED << " is dead obviously he can't attacks !" << RESET << std::endl;
 	else
 	{
-		std::cout << YELLOW << "ScavTrap " << CYAN << this->_name << RESET << " attacks " << CYAN << target << RESET << ", causing " << MAGENTA << _attackDamage << RESET << " points of damage!" << std::endl;
+		std::cout << YELLOW << "ScavTrap " << CYAN << this->_name << RESET << " attacks " << CYAN << target << RESET << ", causing " << MAGENTA << this->_attackDamage << RESET << " points of damage!" << std::endl;
 		this->_energyPoints--;
 	}
 }

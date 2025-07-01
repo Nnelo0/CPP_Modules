@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:36:30 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 13:48:44 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 09:45:58 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 FragTrap::FragTrap()
 {
 	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 	std::cout << MAGENTA << "FragTrap default constructor called" << RESET << std::endl;
 }
 

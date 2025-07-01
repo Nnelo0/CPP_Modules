@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:36:45 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/24 11:16:44 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 09:07:15 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class FragTrap: public ClapTrap
 	
 		FragTrap& operator=(const FragTrap& other);
 		
-		virtual ~FragTrap();
+		~FragTrap();
 
 		void highFivesGuys(void);
 };

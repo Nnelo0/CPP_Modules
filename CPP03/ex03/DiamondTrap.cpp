@@ -6,27 +6,27 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:56:07 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 12:38:24 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 11:13:06 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): ClapTrap("unknown_clap_name")
+DiamondTrap::DiamondTrap(): ClapTrap("unknown_clap_name"), FragTrap(), ScavTrap()
 {
 	this->_name = "unknown";
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDamage = FragTrap::_attackDamage;
+	this->_hitPoints = FragTrap::_DefaultHitPoints;
+	this->_energyPoints = ScavTrap::_DefaultEnergyPoints;
+	this->_attackDamage = FragTrap::_DefaultAttackDamage;
 	std::cout << PINK << "DiamondTrap default constructor called" << RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
 	this->_name = name;
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDamage = FragTrap::_attackDamage;
+	this->_hitPoints = FragTrap::_DefaultHitPoints;
+	this->_energyPoints = ScavTrap::_DefaultEnergyPoints;
+	this->_attackDamage = FragTrap::_DefaultAttackDamage;
 	std::cout << PINK << "DiamondTrap name constructor called for " << CYAN << _name << RESET << std::endl;
 }
 
