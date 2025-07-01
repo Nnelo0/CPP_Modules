@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 18:49:15 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 20:15:09 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 21:35:23 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,6 @@ class MateriaSource: public IMateriaSource
 
 		void learnMateria(AMateria*);
 		AMateria* createMateria(std::string const & type);
+
+		std::string getMaterias(void) const;
 };

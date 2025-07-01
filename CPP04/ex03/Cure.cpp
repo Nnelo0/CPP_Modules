@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 16:47:48 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 21:24:57 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 20:41:12 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ Cure::~Cure()
 void Cure::use(ICharacter& target)
 {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
-
-	AMateria::use(target);
 }
 
 AMateria* Cure::clone() const

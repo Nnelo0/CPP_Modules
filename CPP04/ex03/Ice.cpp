@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 16:47:44 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 21:25:12 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 20:41:15 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ Ice::~Ice()
 void Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *"<< std::endl;
-
-	AMateria::use(target);
 }
 
 AMateria* Ice::clone() const

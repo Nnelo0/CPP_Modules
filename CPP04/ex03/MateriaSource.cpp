@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 19:33:33 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 21:26:32 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 22:22:44 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ MateriaSource::MateriaSource(const MateriaSource& materiaSource): IMateriaSource
 {
 	for (int i = 0; i < 4; ++i)
 	{
-		if (materiaSource._materias[i])
-			_materias[i] = materiaSource._materias[i]->clone();
+		if (materiaSource._materias[i]) {
+			_materias[i] = materiaSource._materias[i]->clone();}
 		else
 			_materias[i] = NULL;
 	}
@@ -53,9 +53,7 @@ MateriaSource::~MateriaSource()
 
 void MateriaSource::learnMateria(AMateria* materia)
 {
-	if (!materia)
-	{
-		std::cout << RED << "MateriaSource cannot learn a null materia." << RESET << std::endl;		
+	if (!materia) {
 		return;
 	}
 
@@ -67,8 +65,6 @@ void MateriaSource::learnMateria(AMateria* materia)
 			return;
 		}
 	}
-	if (materia)
-		std::cout << RED << "MateriaSource already knows 4 materias, cannot learn more." << RESET << std::endl;
 	delete materia;
 }
 
@@ -81,6 +77,21 @@ AMateria	*MateriaSource::createMateria(const std::string &type)
 			return _materias[i]->clone();
 		}
 	}
-	std::cout << RED << "Cannot create materia, type: " << GREEN << type << RED <<" is invalid!" << RESET << std::endl;
 	return (0);
+}
+
+std::string MateriaSource::getMaterias(void) const	
+{
+	std::string _materiasList;
+
+	for (int i = 0; i < 4; ++i)
+	{
+		if (_materias[i])
+			_materiasList += _materias[i]->getType() + " ";
+		else
+			_materiasList += "empty";
+		_materiasList += "\n";
+	}
+
+	return _materiasList;
 }
