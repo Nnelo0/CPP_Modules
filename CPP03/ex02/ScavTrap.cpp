@@ -6,14 +6,14 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 16:44:18 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/06/30 13:46:45 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 11:39:51 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap():ClapTrap("unknown")
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap()
 	std::cout << YELLOW << "ScavTrap default constructor called" << RESET << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 {
 	this->_name = name;
 	this->_hitPoints = 100;

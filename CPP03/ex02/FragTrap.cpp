@@ -6,13 +6,13 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:36:30 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/07/01 09:46:21 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 11:41:01 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap():ClapTrap("unknown")
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
@@ -20,7 +20,7 @@ FragTrap::FragTrap()
 	std::cout << MAGENTA << "FragTrap default constructor called" << RESET << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name):ClapTrap(name)
 {
 	this->_name = name;
 	this->_hitPoints = 100;
@@ -54,5 +54,5 @@ FragTrap& FragTrap::operator=(const FragTrap& fragTrap)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << MAGENTA << "FragTrap " << CYAN << this->_name << BLUE << " High Five with me guys !!" << RESET << std::endl;
+	std::cout << MAGENTA << "FragTrap " << CYAN << this->_name << BLUE << ": High Five with me guys !!" << RESET << std::endl;
 }

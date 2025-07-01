@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:47 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/07/01 09:12:28 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/01 12:41:52 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ int main()
 	std::cout << std::endl;
 
 	ClapTrap *test = new ScavTrap();
+	std::cout << std::endl;
+	
 	test->attack("test");
+	std::cout << std::endl;
+	
 	delete test;
 }
