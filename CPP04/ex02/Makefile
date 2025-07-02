@@ -1,4 +1,4 @@
-NAME = Polymorphisme
+NAME = Abstract_class
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
