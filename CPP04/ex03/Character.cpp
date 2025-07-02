@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 16:51:35 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/07/01 22:40:18 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/02 10:07:03 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ Character::~Character()
 	for (int i = 0; i < 4; ++i) {
 		delete _inventory[i];
 	}
-
 }
 
 std::string const &Character::getName(void) const
@@ -73,13 +72,27 @@ void Character::equip(AMateria *m)
 		return;
 	}
 
+	bool isFull = true;
+
+    for (int i = 0; i < 4; ++i)
+    {
+        if (!_inventory[i]) {
+            isFull = false;
+            break;
+        }
+    }
+
+	if (isFull)
+		return;
+
 	for (int i = 0; i < 4; ++i)
 	{
-		if (_inventory[i] == m) {
+		if (this->_inventory[i] == m && i >= 0 && i < 4) {
+			this->_inventory[i + 1] = m->clone();
 			return;
 		}
-		if (!_inventory[i]) {
-			_inventory[i] = m;
+		if (!this->_inventory[i]) {
+			this->_inventory[i] = m;
 			return;
 		}
 	}
@@ -88,7 +101,7 @@ void Character::equip(AMateria *m)
 
 void Character::unequip(int idx)
 {
-	if (idx < 0 || idx >= 4 || !_inventory[idx]) {
+	if (idx < 0 || idx >= 4 || !this->_inventory[idx]) {
 		return;
 	}
 
@@ -97,10 +110,10 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter &target)
 {
-	if (idx < 0 || idx >= 4 || !_inventory[idx]) {
+	if (idx < 0 || idx >= 4 || !this->_inventory[idx]) {
 		return;
 	}
-	_inventory[idx]->use(target);
+	this->_inventory[idx]->use(target);
 }
 
 
@@ -110,8 +123,8 @@ std::string Character::getInventory(void) const
 
 	for (int i = 0; i < 4; ++i)
 	{
-		if (_inventory[i])
-			inventory += _inventory[i]->getType() + " ";
+		if (this->_inventory[i])
+			inventory += this->_inventory[i]->getType() + " ";
 		else
 			inventory += "empty";
 		inventory += "\n";

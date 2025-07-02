@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 23:15:42 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/07/01 22:44:16 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/02 10:10:22 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int main()
 
 		std::cout << YELLOW << "src after learn a 5 Materia: \n" << RESET << src->getMaterias() << RED << "he can't know 4+ Materia\n" << RESET << std::endl;
 
+		std::cout << MAGENTA << "|-------- Equipping materias --------|\n" << RESET << std::endl;
+
 		Character* me = new Character("me");
 
 		std::cout << PINK << "Inventory of " << me->getName() << ":\n" << RESET << me->getInventory() << std::endl;
@@ -92,14 +94,13 @@ int main()
 		tmp = src->createMateria("rock"); 
 		if (tmp)
 			me->equip(tmp);
-		
+
 		std::cout << PINK << "Inventory of " << me->getName() << " after equip unknown and rock Materia:\n" << RESET << me->getInventory() << std::endl;
 
 		AMateria *Item1 = src->createMateria("ice");
 
 		AMateria *Item2 = src->createMateria("cure");
 
-		std::cout << MAGENTA << "|-------- Equipping materias --------|\n" << RESET << std::endl;
 
 		me->equip(Item1);
 		std::cout << PINK << "Inventory of " << me->getName() << " after equip Ice Materia:\n" << RESET << me->getInventory() << std::endl;
@@ -107,11 +108,21 @@ int main()
 		me->equip(Item2);
 		me->equip(Item2);
 
-		AMateria *Item3 = src->createMateria("ice");
-		me->equip(Item3);
+		std::cout << PINK << "Inventory of " << me->getName() << " after equip 2 same Materia:\n" << RESET << me->getInventory() << std::endl;
 
-		AMateria *Item4 = src->createMateria("cure");
-		me->equip(Item4);
+		Character *meCopie = new Character(*me);
+
+		std::cout << CYAN << "Inventory of (Copie) " << meCopie->getName() << " after copie of me:\n" << RESET << meCopie->getInventory() << std::endl;
+
+		meCopie->equip(Item1->clone());
+		std::cout << CYAN << "Inventory of (Copie) " << meCopie->getName() << " after add 1 item in copie:\n" << RESET << meCopie->getInventory() << std::endl;
+		std::cout << PINK << "Inventory of " << me->getName() << " after add 1 item in copie:\n" << RESET << me->getInventory() << std::endl;
+
+		delete meCopie;
+
+		AMateria *Item3 = src->createMateria("ice");
+
+		me->equip(Item3);
 
 		std::cout << PINK << "Inventory of " << me->getName() << " after equip 4 Materia:\n" << RESET << me->getInventory() << std::endl;
 
@@ -143,6 +154,12 @@ int main()
 
 		std::cout << RED << "Trying to use Materia at index: 0 but he was unequip before, nothing happening...\n" << RESET << std::endl;
 		me->use(0, *bob);
+
+		AMateria *NewItem = src->createMateria("cure");
+
+		me->equip(NewItem);
+
+		std::cout << PINK << "Inventory of " << me->getName() << " after equip New Materia after unequip one Materia:\n" << RESET << me->getInventory() << std::endl;
 
 		delete bob;
 		delete me;

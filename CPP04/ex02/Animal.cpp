@@ -6,7 +6,7 @@
 /*   By: ebroudic <ebroudic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 22:51:45 by ebroudic          #+#    #+#             */
-/*   Updated: 2025/04/26 00:12:59 by ebroudic         ###   ########.fr       */
+/*   Updated: 2025/07/02 08:56:24 by ebroudic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,3 @@ std::string Animal::getType()const
 	return type;
 }
 
-void Animal::makeSound()const
-{
-	std::cout << "animal with type : " << type << " made a sound !" << std::endl; 
-}
